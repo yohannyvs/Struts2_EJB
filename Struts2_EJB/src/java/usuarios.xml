@@ -14,5 +14,13 @@
             <result type="redirect" name="inserto">index.jsp</result>
         </action>
         
+        <action name="Mostrar" method="Mostrar" class="Controlador.usuarioControlador">
+            <result name="success">/view/Editar_Usuario.jsp</result>
+        </action>
+        
+        <action name="Editar" method="Editar" class="Controlador.usuarioControlador">
+            <result type="redirect" name="success">listado.action</result>
+        </action>
+        
     </package>
 </struts>
