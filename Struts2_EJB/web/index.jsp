@@ -1,9 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : 30/06/2017, 10:39:14 PM
-    Author     : mneakira00
---%>
-
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
