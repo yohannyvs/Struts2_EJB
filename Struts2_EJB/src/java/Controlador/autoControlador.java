@@ -163,7 +163,7 @@ public class autoControlador extends ActionSupport
         return SUCCESS;
     }
     
-    public String lista()
+    public String lista_auto()
     {
         lista = new ArrayList<Auto>();
         lista = autoFacade.findAll();
