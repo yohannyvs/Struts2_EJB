@@ -1,4 +1,4 @@
-package Contolador;
+package Controlador;
 
 import Modelo.Usuario;
 import EJB.UsuarioFacade;

@@ -1,5 +1,5 @@
 
-package Contolador;
+package Controlador;
 
 import Modelo.Auto;
 import EJB.AutoFacade;

@@ -3,7 +3,16 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <package name="Controlador" extends="struts-default">
+    <package name="Controlador" namespace="/" extends="struts-default">
+        
+        <action name="Login" method="Login" class="Controlador.usuarioControlador">
+            <result name="success">/vistas/Lista_Autos.jsp</result>
+        </action>
+        
+        <action name="Registrar_Usuario" method="Registrar_Usuario" class="Controlador.usuarioControlador">
+            <result name="success">/vistas/Registro_Usuario.jsp</result>
+            <result type="redirect" name="inserto">index.jsp</result>
+        </action>
         
     </package>
 </struts>

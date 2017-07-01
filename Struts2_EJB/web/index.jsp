@@ -12,13 +12,18 @@
     <body>
         <s:div cssClass="container">
             <s:div cssClass="row">
-                <s:form action="Login" cssClass="form-inline col-md-6">
+                <s:form action="Login" cssClass="form-inline col-md-12">
                     <h3>Inicie Sesión</h3>
                     <s:label>Usuario:</s:label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <s:textfield name="Apodo" cssClass="form-control"/><br><br>
                     <s:label>Contraseña:</s:label>
                     <s:textfield name="Pass" cssClass="form-control"/><br><br>
-                    <s:submit value="Entrar"/>
+                    <s:submit value="Entrar"/>  <br><br>                  
+                </s:form>
+                
+                <s:form action="Registrar_Usuario" >
+                    
+                    <s:submit value="Registrar" />
                 </s:form>
                 
             </s:div>
