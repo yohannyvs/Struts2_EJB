@@ -107,8 +107,90 @@ public class usuarioControlador extends ActionSupport
         this.Pass = Pass;
     }
     
+    @Override
+    public String execute()
+    {
+        return SUCCESS;
+    }
     
+    public String Login()
+    {
+        return SUCCESS;
+    }
     
+    public String lista()
+    {
+        lista= new ArrayList<Usuario>();
+        lista = usuarioFacade.findAll();
+        setLista(lista);
+        
+        return SUCCESS;
+    }
+    
+    public String Registrar_Usuario()
+    {
+        try
+        {
+            if(getNombre() == null||getNombre().equals(""))
+            {
+               return SUCCESS; 
+            }
+        }
+        catch(Exception e)
+        {
+            return SUCCESS;
+        }
+        
+        Usuario u = new Usuario();
+        u.setNombre(getNombre());
+        u.setApellido(getApellido());
+        u.setApodo(getApodo());
+        u.setCorreo(getCorreo());
+        u.setDireccion(getDireccion());
+        u.setPass(getPass());
+        u.setTelefono(Integer.parseInt(getTelefono()));
+        
+        usuarioFacade.create(u);
+        
+        return "inserto";
+    }
+    
+    public String Editar()
+    {
+        Usuario u = usuarioFacade.find(getId());
+        u.setNombre(getNombre());
+        u.setApellido(getApellido());
+        u.setApodo(getApodo());
+        u.setCorreo(getCorreo());
+        u.setDireccion(getDireccion());
+        u.setPass(getPass());
+        u.setTelefono(Integer.parseInt(getTelefono()));
+        
+        usuarioFacade.edit(u);
+        
+        List<Usuario> l = usuarioFacade.findAll();
+        setLista(l);
+        
+        return SUCCESS;
+    }
+    
+    public String Mostrar()
+    {
+        Usuario u = usuarioFacade.find(getId());
+        setUsuarios(u);
+        
+        return SUCCESS;
+    }
+    
+    public String Eliminar()
+    {
+        Usuario u = usuarioFacade.find(getId());
+        usuarioFacade.remove(u);
+        List<Usuario> l = usuarioFacade.findAll();
+        setLista(l);
+        
+        return SUCCESS;
+    }
     
     private UsuarioFacade lookupUsuarioFacadeBean() 
     {

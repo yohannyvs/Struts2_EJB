@@ -12,7 +12,7 @@
     <body>
         <s:div cssClass="container">
             <s:div cssClass="row">
-                <s:form action="login" cssClass="form-inline col-md-6">
+                <s:form action="Login" cssClass="form-inline col-md-6">
                     <h3>Inicie Sesión</h3>
                     <s:label>Usuario:</s:label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <s:textfield name="Apodo" cssClass="form-control"/><br><br>
