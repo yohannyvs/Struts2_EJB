@@ -22,5 +22,26 @@
             <result type="redirect" name="success">listado.action</result>
         </action>
         
+        <action name="listar_autos" method="lista_auto" class="Controlador.autoControlador">
+            <result name="success">/vistas/Lista_Autos.jsp</result>
+        </action>
+        
+        <action name="Registrar_Auto" method="Registrar_Usuario" class="Controlador.autoControlador">
+            <result name="success">/vistas/Registro_Auto.jsp</result>
+            <result type="redirect" name="inserto">listar_autos.action</result>
+        </action>
+        
+        <action name="Mostrar_autos" method="Mostrar" class="Controlador.autoControlador">
+            <result name="success">/vistas/Info_Auto.jsp</result>
+        </action>
+        
+        <action name="Editar_auto" method="lista_auto" class="Controlador.autoControlador">
+            <result name="success">listar_autos.action</result>
+        </action>
+        
+        <action name="Eliminar_auto" method="lista" class="Controlador.autoControlador">
+            <result name="success">listar_autos.action</result>
+        </action>
+        
     </package>
 </struts>

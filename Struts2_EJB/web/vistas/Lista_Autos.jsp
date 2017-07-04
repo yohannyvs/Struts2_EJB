@@ -10,6 +10,33 @@
         <title>CR-Autos CUC</title>
     </head>
     <body>
-        
+        <s:div cssClass="container">
+            <s:div cssClass="row">
+                <h3>Lista de Autos Disponibles</h3>
+                <table >
+                    <s:iterator value="lista" >
+                        <tr>
+                            <td>
+                                <s:property value="Modelo"/> 
+                                &nbsp;
+                                <s:property value="Estado"/> 
+                                &nbsp;
+                                <s:property value="Precio"/>
+                                &nbsp;
+                                <s:property value="Anio"/>
+                                &nbsp;
+
+                                <s:url id="url" action="Mostrar_autos">
+                                <s:param name="id"><s:property value="Id"/></s:param>
+                                </s:url>
+
+                                <s:a href="%{url}">Ver</s:a>
+                                &nbsp;
+                            </td>                       
+                        </tr>
+                    </s:iterator>
+                </table>   
+            </s:div>
+        </s:div>
     </body>
 </html>
